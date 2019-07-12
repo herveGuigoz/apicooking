@@ -1,0 +1,21 @@
+{
+  "name": "familyCooking",
+  "version": "1.0.0",
+  "description": "recettes de cuisines en famille",
+  "author": "herveGuigoz",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/http": "^0.3.2",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "tailwindcss": "^1.0.0"
+  }
+}
