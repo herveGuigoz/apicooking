@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-no-wrap">
-    <div class="w-1/6">
+  <div class="grid">
+    <div class="col-2-12 hide-on-mobile">
         <sidebar/>
     </div>
-    <div class="w-5/6">
+    <div class="col-10-12">
         <nuxt />
     </div>
   </div>

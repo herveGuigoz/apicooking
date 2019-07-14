@@ -6,6 +6,9 @@ module.exports = {
       brown: 'rgb(85, 85, 85)',
       grey: 'rgb(245, 245, 245)',
       beige: 'rgb(219, 219, 219)',
+      white: 'rgb(255, 255, 255)',
+      gray500: 'rgb(160,174,192)',
+      red: 'rgb(245,101,101)'
     },
     extend: {}
   },

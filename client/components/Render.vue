@@ -11,7 +11,7 @@
                 </svg>
             </div>
         </div>
-        <div class="flex sm:flex-col sm:items-center md:flex-row flex-wap w-full py-8 px-3">
+        <div class="flex sm:flex-col sm:items-center md:flex-row md:items-start flex-wap w-full py-8 px-3">
             <div id="ingredients" class="md:w-1/2 flex flex-col">
                 <h2 class="text-xs font-bold text-brown">Ingredients</h2>
                 <ul class="list-disc ml-4 pt-3">

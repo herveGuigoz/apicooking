@@ -4,7 +4,7 @@
       <search/>
       <box/>
     </div>
-    <div class="w-3/5 bg-grey px-6 h-screen">
+    <div class="w-3/5 bg-grey flex-1 px-6 h-screen">
       <render/>
     </div>
   </div>
