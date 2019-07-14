@@ -7,19 +7,40 @@
                     <label class="block uppercase tracking-wide text-xs font-bold text-brown mb-2" for="title">
                         Titre
                     </label>
-                    <input class="appearance-none block w-full bg-grey text-brown rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="title" type="text" placeholder="...">
+                    <input class="appearance-none block w-full bg-grey text-brown rounded py-2 px-4 mb-3 leading-tight focus:outline-none" id="title" type="text" placeholder="...">
                     <p class="text-red text-xs italic">Please fill out this field.</p>
                 </div>
-                <div class="w-full flex flex-col px-3 mb-3">
-                    <p class="block uppercase tracking-wide text-xs font-bold text-brown mb-2 w-full">
-                    Ingredients
+
+                <div class="flex flex-col">
+                    <p class="block uppercase tracking-wide text-xs font-bold text-brown mb-2 w-full px-3">
+                    Duree
                     </p>
                     <div class="flex flex-no-wrap">
+                        <div class="w-full flex flex-no-wrap px-3 mb-3">
+                            <input class="appearance-none block w-full text-xs bg-grey text-brown rounded-l-sm py-1 px-4 mb-3 leading-tight focus:outline-none" type="number" placeholder="prep">
+                            <p class="px-3 text-xs border border-grey py-1 mb-3 rounded-r-sm">minutes</p>
+                        </div>
+                        <div class="w-full flex flex-no-wrap px-3 mb-3">
+                            <input class="appearance-none block w-full text-xs bg-grey text-brown rounded-l-sm py-1 px-4 mb-3 leading-tight focus:outline-none" type="number" placeholder="cuisson">
+                            <p class="px-3 text-xs border border-grey py-1 mb-3 rounded-r-sm">minutes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full flex flex-col px-3 mb-3">
+                    <div class="flex flex-no-wrap items-center">
+                        <p class="block uppercase tracking-wide text-xs font-bold text-brown mb-2">
+                            Ingredients
+                        </p>
+                        <button class="ml-3 px-3 text-xs border border-green text-green py-1 mb-3 rounded">+</button>
+                    </div>
+                    <div class="flex flex-no-wrap" v-for="{ingredient, index} in ingredients" :key="index">
                         <div class="w-4/5">
-                            <input class="appearance-none block w-full bg-grey text-brown rounded py-3 px-4 mb-3 leading-tight focus:outline-none" type="text" placeholder="...">
+                            <input v-model="ingedient"
+                                class="appearance-none block w-full bg-grey text-brown rounded py-2 px-4 mb-3 leading-tight focus:outline-none" type="text" placeholder="...">
                         </div>
                         <div class="flex-1 text-center">
-                            <button class="btn text-beige text-xl py-1 px-4 border border-beige rounded">+</button>
+                            <button class="btn text-green py-1 px-4 mb-3 border border-green rounded">-</button>
                         </div>
                     </div>
                 </div>
@@ -36,10 +57,27 @@ import Buttons from '@/components/newRecipe/Buttons'
 import Render from '@/components/Render'
 
 export default {
-  components: {
+    components: {
     Buttons,
     Render
-  }
+    },
+    data: function() {
+        return {
+            ingredients: [''],
+        }
+    },
+    methods: {
+        addIngredient: function() {
+            var elem = document.createElement('div');
+            this.rows.push({
+                ingredient: "",
+                quantite: ""
+            });
+        },
+        removeIngredient: function(index) {
+            this.rows.splice(index, 1);
+        }
+    }
 }
 </script>
 
