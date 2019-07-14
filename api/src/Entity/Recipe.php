@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Serializer\Annotation\Groups;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
@@ -23,6 +25,7 @@ class Recipe
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"user:read"})
      */
     private $id;
 
@@ -68,9 +71,16 @@ class Recipe
      */
     private $owner;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Utilisateur", mappedBy="likes")
+     * @Groups({"recipe:read"})
+     */
+    private $likers;
+
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
+        $this->likers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -161,6 +171,34 @@ class Recipe
     public function setOwner(?Utilisateur $owner): self
     {
         $this->owner = $owner;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Utilisateur[]
+     */
+    public function getLikers(): Collection
+    {
+        return $this->likers;
+    }
+
+    public function addLiker(Utilisateur $liker): self
+    {
+        if (!$this->likers->contains($liker)) {
+            $this->likers[] = $liker;
+            $liker->addLike($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLiker(Utilisateur $liker): self
+    {
+        if ($this->likers->contains($liker)) {
+            $this->likers->removeElement($liker);
+            $liker->removeLike($this);
+        }
 
         return $this;
     }

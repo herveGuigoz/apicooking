@@ -55,9 +55,16 @@ class Utilisateur implements UserInterface
      */
     private $recipes;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Recipe", inversedBy="likers")
+     * @Groups({"user:read"})
+     */
+    private $likes;
+
     public function __construct()
     {
         $this->recipes = new ArrayCollection();
+        $this->likes = new ArrayCollection();
     }
     public function getId(): ?int
     {
@@ -155,6 +162,32 @@ class Utilisateur implements UserInterface
             if ($recipe->getOwner() === $this) {
                 $recipe->setOwner(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Recipe[]
+     */
+    public function getLikes(): Collection
+    {
+        return $this->likes;
+    }
+
+    public function addLike(Recipe $like): self
+    {
+        if (!$this->likes->contains($like)) {
+            $this->likes[] = $like;
+        }
+
+        return $this;
+    }
+
+    public function removeLike(Recipe $like): self
+    {
+        if ($this->likes->contains($like)) {
+            $this->likes->removeElement($like);
         }
 
         return $this;
