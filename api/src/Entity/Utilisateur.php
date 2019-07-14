@@ -1,6 +1,8 @@
 <?php
 namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -42,10 +44,21 @@ class Utilisateur implements UserInterface
     private $password;
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     * @Groups({"user:read", "user:write"})
+     * @Groups({"recipe:read", "user:read", "user:write"})
      * @Assert\NotBlank()
      */
     private $username;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Recipe", mappedBy="owner", orphanRemoval=true)
+     * @Groups({"user:read"})
+     */
+    private $recipes;
+
+    public function __construct()
+    {
+        $this->recipes = new ArrayCollection();
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -113,6 +126,37 @@ class Utilisateur implements UserInterface
     public function setUsername(string $username): self
     {
         $this->username = $username;
+        return $this;
+    }
+
+    /**
+     * @return Collection|Recipe[]
+     */
+    public function getRecipes(): Collection
+    {
+        return $this->recipes;
+    }
+
+    public function addRecipe(Recipe $recipe): self
+    {
+        if (!$this->recipes->contains($recipe)) {
+            $this->recipes[] = $recipe;
+            $recipe->setOwner($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRecipe(Recipe $recipe): self
+    {
+        if ($this->recipes->contains($recipe)) {
+            $this->recipes->removeElement($recipe);
+            // set the owning side to null (unless already changed)
+            if ($recipe->getOwner() === $this) {
+                $recipe->setOwner(null);
+            }
+        }
+
         return $this;
     }
 }

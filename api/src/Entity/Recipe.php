@@ -2,14 +2,20 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Serializer\Annotation\Groups;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ORM\Entity()
  * @ApiResource(
- *      
+ *      normalizationContext={"groups"={"recipe:read"}}
  * )
+ * @ApiFilter(SearchFilter::class, properties={
+ *     "owner.username": "partial"
+ * })
  */
 class Recipe
 {
@@ -22,16 +28,19 @@ class Recipe
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"recipe:read", "user:read"})
      */
     private $title;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"recipe:read"})
      */
     private $prepTime;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"recipe:read"})
      */
     private $cookTime;
 
@@ -42,13 +51,22 @@ class Recipe
 
     /**
      * @ORM\Column(type="json_document", options={"jsonb": true}, nullable=false)
+     * @Groups({"recipe:read"})
      */
     private $ingredients;
 
     /**
      * @ORM\Column(type="json_document", options={"jsonb": true}, nullable=false)
+     * @Groups({"recipe:read"})
      */
     private $steps;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Utilisateur", inversedBy="recipes")
+     * @ORM\JoinColumn(nullable=false)
+     * @Groups({"recipe:read"})
+     */
+    private $owner;
 
     public function __construct()
     {
@@ -96,6 +114,11 @@ class Recipe
         return $this;
     }
 
+    /**
+     * @Groups({"recipe:read"})
+     *
+     * @return integer
+     */
     public function getTotalTime(): int
     {
         return $this->prepTime + $this->cookTime;
@@ -126,6 +149,18 @@ class Recipe
     public function setSteps($steps)
     {
         $this->steps = $steps;
+
+        return $this;
+    }
+
+    public function getOwner(): ?Utilisateur
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?Utilisateur $owner): self
+    {
+        $this->owner = $owner;
 
         return $this;
     }
