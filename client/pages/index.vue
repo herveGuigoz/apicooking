@@ -20,6 +20,17 @@ export default {
     Search,
     Box,
     Render
+  },
+  async created() {
+    try {
+        const response = await this.$http.$get(
+          "https://localhost:8443/recipes"
+        );
+        this.$store.commit('loadAllRecipes', response["hydra:member"])
+
+      } catch (err) {
+        console.log(err)
+      }
   }
 }
 </script>

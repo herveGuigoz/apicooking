@@ -18,7 +18,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#00D1B2' },
   /*
   ** Global CSS
   */
@@ -31,16 +31,17 @@ export default {
   */
   modules: [
     '@nuxt/http',
+    'nuxt-purgecss'
   ],
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
+  http: {
+    proxy: true
+  },
+  purgeCSS: {},
   /*
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     postcss: {
       plugins: {
         tailwindcss: './tailwind.config.js'

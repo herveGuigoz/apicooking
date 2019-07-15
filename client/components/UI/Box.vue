@@ -1,17 +1,31 @@
 <template>
-    <div class="box">
-        <div class="flex flex-row flex-no-wrap items-center">
-            <div id="recipe-title" class="font-bold">Gratin d'auphinois</div>
-            <div id="recipe-author" class="pl-3 text-xs">@herveGuigoz</div>
-            <div id="recipe-time" class="text-right flex-1 text-xs">45 min</div>
+    <div>
+        <div 
+        v-for="recipe in onLoad"
+        :key="recipe.id"
+        class="box">
+            <div class="flex flex-row flex-no-wrap items-center">
+                <div id="recipe-title" class="font-bold">{{ recipe.title }}</div>
+                <div id="recipe-author" class="pl-3 text-xs">@{{ recipe.owner.username }}</div>
+                <div id="recipe-time" class="text-right flex-1 text-xs">{{ recipe.totalTime }} min</div>
+            </div>
+            <div id="recipe-ingredients" class="pt-2 text-xs flex flex-wrap">
+                <span v-for="(ingredient, index) in recipe.ingredients" :key="index" class="pl-1">
+                    {{ ingredient }}.
+                </span>
+            </div>
         </div>
-        <div id="recipe-ingredients" class="pt-2 text-xs">Poivron rouge, Poivron jaune, Coco, Gingembre, Ail</div>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-    name: 'box'
+    name: 'box',
+    computed: mapState([
+        'onLoad'
+    ])
 }
 </script>
 
