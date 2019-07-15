@@ -39,7 +39,7 @@
         <div class="flex flex-col items-center justify-end h-full">
             <div class="w-auto my-4">
                 <button 
-                class="hover:border-brown hover:text-brown hover:bg-beige text-green py-1 px-4 border border-green rounded shadow">
+                class="hover:border-brown hover:text-brown hover:bg-beige text-white py-1 px-4 border border-green rounded shadow">
                     Login
                 </button>
             </div>

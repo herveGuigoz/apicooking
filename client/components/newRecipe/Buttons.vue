@@ -1,8 +1,8 @@
 <template>
     <div class="box">
         <div class="flex flex-row flex-no-wrap items-center justify-around">
-            <button class="btn-green hover:bg-green text-green py-1 px-4 border border-green rounded shadow">Enregistrer</button>
-            <button class="btn text-blue-700 py-1 px-4 border border-gray-500 rounded shadow">Annuler</button>
+            <button class="text-teal-100 py-1 px-4 border border-teal-100 rounded">Enregistrer</button>
+            <button class="btn text-gray-900 py-1 px-4 border border-gray-900 rounded">Annuler</button>
         </div>
     </div>
 </template>
