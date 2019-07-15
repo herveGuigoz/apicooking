@@ -32,15 +32,19 @@
                         <p class="block uppercase tracking-wide text-xs font-bold text-brown mb-2">
                             Ingredients
                         </p>
-                        <button class="ml-3 px-3 text-xs border border-green text-green py-1 mb-3 rounded">+</button>
+                        <button 
+                        @click="addIngredient"
+                        class="ml-3 px-3 text-xs border border-green text-green py-1 mb-3 rounded">+</button>
                     </div>
-                    <div class="flex flex-no-wrap" v-for="{ingredient, index} in ingredients" :key="index">
+                    <div class="flex flex-no-wrap" v-for="(ingredient, index) in ingredients" :key="index">
                         <div class="w-4/5">
-                            <input v-model="ingedient"
+                            <input v-model="ingredient.name"
                                 class="appearance-none block w-full bg-grey text-brown rounded py-2 px-4 mb-3 leading-tight focus:outline-none" type="text" placeholder="...">
                         </div>
                         <div class="flex-1 text-center">
-                            <button class="btn text-green py-1 px-4 mb-3 border border-green rounded">-</button>
+                            <button 
+                            @click="removeIngredient(index)"
+                            class="btn text-green py-1 px-4 mb-3 border border-green rounded">-</button>
                         </div>
                     </div>
                 </div>
@@ -58,24 +62,23 @@ import Render from '@/components/Render'
 
 export default {
     components: {
-    Buttons,
-    Render
+        Buttons,
+        Render
     },
-    data: function() {
+    data() {
         return {
-            ingredients: [''],
+            ingredients: [{
+                id: 0,
+                name: ""
+            }],
         }
     },
     methods: {
         addIngredient: function() {
-            var elem = document.createElement('div');
-            this.rows.push({
-                ingredient: "",
-                quantite: ""
-            });
+            this.ingredients.push({name:""});
         },
         removeIngredient: function(index) {
-            this.rows.splice(index, 1);
+            this.ingredients.splice(index, 1);
         }
     }
 }
