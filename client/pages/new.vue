@@ -23,7 +23,7 @@ export default {
     components: {
         Buttons,
         Render,
-        'recipe-form':RecipeForm
+        RecipeForm
     },
     computed: {
         recipe () {

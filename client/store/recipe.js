@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 export const state = () => ({
     new: {
-        "title": "",
+        "title": '',
         "prepTime": null,
         "cookTime": null,
         "owner": '',
