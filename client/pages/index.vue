@@ -5,7 +5,9 @@
       <box/>
     </div>
     <div class="w-3/5 bg-grey flex-1 px-6 h-screen">
+    <!--
       <render/>
+    -->
     </div>
   </div>
 </template>
@@ -21,12 +23,21 @@ export default {
     Box,
     Render
   },
-  async created() {
+  /*
+  async asyncData ({ $http }) {
+    const response = await $http.get(
+          "http://172.18.0.9/16/recipes"
+    );
+    return { response }
+    //return this.$store.commit('allRecipes/loadAllRecipes', response["hydra:member"])
+  }
+  */
+  async beforeCreate() {
     try {
         const response = await this.$http.$get(
           "https://localhost:8443/recipes"
         );
-        this.$store.commit('allRecipes/loadAllRecipes', response["hydra:member"])
+        this.$store.commit('allRecipes/load', response["hydra:member"])
 
       } catch (err) {
         console.log(err)

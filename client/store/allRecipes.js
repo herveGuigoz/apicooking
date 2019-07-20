@@ -3,7 +3,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-    loadAllRecipes (state, data) {
+    load (state, data) {
         state.recipes = data
     }
 }
+

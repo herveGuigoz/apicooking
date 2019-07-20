@@ -15,6 +15,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0', // default: localhost,
+    //timing: false
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -31,10 +36,15 @@ export default {
   */
   modules: [
     '@nuxt/http',
-    'nuxt-purgecss'
+    '@nuxtjs/axios',
+    'nuxt-purgecss',
+    '@nuxtjs/auth'
   ],
   http: {
     proxy: true
+  },
+  auth: {
+    // Options
   },
   purgeCSS: {},
   /*

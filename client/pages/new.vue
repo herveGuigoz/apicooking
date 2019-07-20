@@ -20,6 +20,7 @@ import Render from '@/components/Render'
 
 
 export default {
+    //middleware: 'auth',
     components: {
         Buttons,
         Render,

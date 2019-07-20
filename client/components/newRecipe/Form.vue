@@ -8,7 +8,6 @@
             :value="recipe.title"
             @input="title"
             class="appearance-none block w-full bg-grey text-brown rounded py-2 px-4 mb-3 leading-tight focus:outline-none" id="title" type="text" placeholder="...">
-            <p class="text-red-500 text-xs italic">Please fill out this field.</p>
         </div>
 
         <div class="flex flex-col">
