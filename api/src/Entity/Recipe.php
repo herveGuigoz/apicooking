@@ -65,14 +65,14 @@ class Recipe
     private $steps;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Utilisateur", inversedBy="recipes")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Users", inversedBy="recipes")
      * @ORM\JoinColumn(nullable=false)
      * @Groups({"recipe:read"})
      */
     private $owner;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Utilisateur", mappedBy="likes")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Users", mappedBy="likes")
      * @Groups({"recipe:read"})
      */
     private $likers;
@@ -163,12 +163,12 @@ class Recipe
         return $this;
     }
 
-    public function getOwner(): ?Utilisateur
+    public function getOwner(): ?Users
     {
         return $this->owner;
     }
 
-    public function setOwner(?Utilisateur $owner): self
+    public function setOwner(?Users $owner): self
     {
         $this->owner = $owner;
 
@@ -176,14 +176,14 @@ class Recipe
     }
 
     /**
-     * @return Collection|Utilisateur[]
+     * @return Collection|Users[]
      */
     public function getLikers(): Collection
     {
         return $this->likers;
     }
 
-    public function addLiker(Utilisateur $liker): self
+    public function addLiker(Users $liker): self
     {
         if (!$this->likers->contains($liker)) {
             $this->likers[] = $liker;
@@ -193,7 +193,7 @@ class Recipe
         return $this;
     }
 
-    public function removeLiker(Utilisateur $liker): self
+    public function removeLiker(Users $liker): self
     {
         if ($this->likers->contains($liker)) {
             $this->likers->removeElement($liker);
