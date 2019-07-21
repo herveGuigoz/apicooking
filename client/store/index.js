@@ -1,16 +1,26 @@
-import Vue from "vue";
+export const state = () => ({
+    recipes: null
+})
 
-// save our state (isPanel open or not) 
-export const store = Vue.observable({
-    isNavOpen: false
-});
-
-// We call toggleNav anywhere we need it in our app
 export const mutations = {
-    toggleNav() {
-        store.isNavOpen = !store.isNavOpen
+    LOAD (state, data) {
+        state.recipes = data
     }
-};
+}
 
+export const actions = {
+    async nuxtServerInit({ commit }) {
+        const res = await this.$axios.$get('http://localhost:8080/recipes');
+        const data = res['hydra:member']
+        commit('LOAD', data )
+    }
+}
 
-// https://regenrek.com/posts/how-to-create-an-animated-vue-sidebar-menu-with-vue-observable/
+export const getters = {
+    getRecipes: (state) => {
+        return state.recipes
+    },
+    getFirstRecipe: (state) => {
+        return state.recipes[0]
+    }
+}

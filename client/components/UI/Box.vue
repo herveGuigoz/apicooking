@@ -1,9 +1,6 @@
 <template>
     <div>
-        <div 
-        v-for="recipe in onLoad"
-        :key="recipe.id"
-        class="box">
+        <div class="box my-3">
             <div class="flex flex-row flex-no-wrap items-center">
                 <div id="recipe-title" class="font-bold">{{ recipe.title }}</div>
                 <div id="recipe-author" class="pl-3 text-xs">@{{ recipe.owner.username }}</div>
@@ -19,13 +16,14 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
     name: 'box',
-    computed: mapState([
-        'onLoad'
-    ])
+    props: {
+        recipe: {
+            type:Object,
+            required:true
+        }
+    }
 }
 </script>
 
@@ -37,8 +35,5 @@ export default {
     display: block;
     border-radius: 6px;
     padding: 1.25rem;
-}
-.box:not(:last-child) {
-    margin-bottom: 0.5rem;
 }
 </style>

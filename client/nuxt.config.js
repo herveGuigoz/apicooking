@@ -35,16 +35,16 @@ export default {
   ** Plugins to load before mounting the App
   */
   modules: [
-    '@nuxt/http',
     '@nuxtjs/axios',
     'nuxt-purgecss',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
+    '@nuxtjs/proxy',
   ],
-  http: {
-    proxy: true
-  },
   auth: {
     // Options
+  },
+  axios: {
+    progress: true,
   },
   purgeCSS: {},
   /*

@@ -1,5 +1,5 @@
 <template>
-    <div id="col-right" class="bg-grey text-brown">
+    <div id="col-right" class="bg-grey text-brown cursor-pointer">
         <div class="flex flex-row flex-wrap justify-between w-full">
             <div id="title">
                 <h1 class="font-bold text-2xl text-brown">{{ recipe.title }}</h1>
