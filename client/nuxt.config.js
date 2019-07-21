@@ -46,21 +46,26 @@ export default {
   axios: {
     progress: true,
   },
-  purgeCSS: {},
-  /*
+  purgeCSS: {
+    
+  },
+ /*
   ** Build configuration
   */
-  build: {
-    extractCSS: true,
-    postcss: {
-      plugins: {
-        tailwindcss: './tailwind.config.js'
-      }
-    },
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
+ build: {
+  postcss: {
+    plugins: {
+      tailwindcss: './tailwind.config.js'
     }
+  },
+  /*
+  ** You can extend webpack config here
+  */
+  extend(config, ctx) {
   }
+},
+transition: {
+  name: 'fade',
+  mode: 'out-in'
+}
 }

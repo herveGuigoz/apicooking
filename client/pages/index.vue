@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-no-wrap">
-    <div class="w-2/5 h-screen p-2">
+    <div class="w-2/5 h-screen p-2 overflow-scroll">
       <search/>
       <box v-for="(recipe, index) in recipes" :key="index" :recipe="recipe" @click.native="select(recipe)"/>
     </div>
-    <div class="w-3/5 bg-grey flex-1 px-6 h-screen">
+    <div class="w-3/5 bg-grey flex-1 px-6 h-screen overflow-scroll">
     <!--
       <render :recipe="renderedRecipe"/>
     -->
@@ -44,7 +44,5 @@ export default {
 </script>
 
 <style>
-render {
-  cursor: pointer
-}
+
 </style>
