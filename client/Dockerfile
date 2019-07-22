@@ -4,17 +4,12 @@ RUN mkdir -p /usr/src/client
 
 WORKDIR /usr/src/client
 
+RUN yarn global add @api-platform/client-generator
+
 # Prevent the reinstallation of node modules at every changes in the source code
 COPY package.json yarn.lock ./
-COPY . ./
 RUN yarn install
 
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV}
+COPY . ./
 
-RUN yarn build
-
-ENV HOST 0.0.0.0
-EXPOSE 3000
-
-CMD yarn dev
+CMD yarn start

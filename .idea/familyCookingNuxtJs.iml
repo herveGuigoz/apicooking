@@ -32,7 +32,10 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/league/html-to-markdown" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/lexik/jwt-authentication-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/namshi/jose" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/nelmio/cors-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/ocramius/package-versions" />
@@ -71,6 +74,7 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/mercure-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/mime" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/orm-pack" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-php72" />

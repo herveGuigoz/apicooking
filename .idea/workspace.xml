@@ -2,9 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61948f9c-c827-4211-b9a7-6d57c26033e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/src/Events/RecipeOwnerSubscriber.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/familyCookingNuxtJs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/familyCookingNuxtJs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/css/simplegrid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/css/tailwind.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Avenir-Book.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Avenir-Book.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Avenir-Book.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Avenir-Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Avenir-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/fonts/Avenir-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Logo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Render.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/UI/Box.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/UI/Search.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/navigation/Sidebar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/navigation/Smallsidebar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/newRecipe/Buttons.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/newRecipe/Form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/default.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/sidebadhover.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/middleware/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/new.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/plugins/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/static/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/recipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2-proxy/conf.d/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/h2-proxy/conf.d/default.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,28 +66,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/pages/new.vue">
+        <entry file="file://$PROJECT_DIR$/api/src/Events/RecipeOwnerSubscriber.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+            <state relative-caret-position="552">
+              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <folding>
+                <element signature="e#30#81#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/css/tailwind.css">
+        <entry file="file://$PROJECT_DIR$/api/vendor/symfony/security-csrf/TokenStorage/TokenStorageInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tailwind.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="305">
+              <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -50,7 +89,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,6 +97,7 @@
         <option value="$PROJECT_DIR$/api/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/client/tailwind.config.js" />
         <option value="$PROJECT_DIR$/client/pages/new.vue" />
+        <option value="$PROJECT_DIR$/api/src/Events/RecipeOwnerSubscriber.php" />
       </list>
     </option>
   </component>
@@ -159,12 +199,16 @@
       <path value="$PROJECT_DIR$/api/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/api/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/api/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/api/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/api/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/api/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/orm-pack" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="102" />
-    <option name="width" value="1735" />
-    <option name="height" value="930" />
+    <option name="y" value="101" />
+    <option name="width" value="1737" />
+    <option name="height" value="931" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -172,42 +216,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="familyCookingNuxtJs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="familyCookingNuxtJs" type="462c0819:PsiDirectoryNode" />
+              <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_platform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="familyCookingNuxtJs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="familyCookingNuxtJs" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="familyCookingNuxtJs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="familyCookingNuxtJs" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="familyCookingNuxtJs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="familyCookingNuxtJs" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="familyCookingNuxtJs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="familyCookingNuxtJs" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Events" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,6 +253,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RunDashboard">
@@ -241,16 +280,19 @@
       <updated>1562972888325</updated>
       <workItem from="1562972897927" duration="659000" />
       <workItem from="1563139758352" duration="2190000" />
+      <workItem from="1563795356900" duration="516000" />
+      <workItem from="1563797301325" duration="2844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2849000" />
+    <option name="totallyTimeSpent" value="6209000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="102" width="1280" height="729" extended-state="6" />
+    <frame x="0" y="101" width="1280" height="729" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -275,31 +317,34 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/src/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/api/src/Entity/User.php" />
+    <entry file="file://$PROJECT_DIR$/client/assets/css/tailwind.css" />
+    <entry file="file://$PROJECT_DIR$/client/tailwind.config.js" />
+    <entry file="file://$PROJECT_DIR$/client/pages/new.vue" />
+    <entry file="file://$PROJECT_DIR$/api/config/packages/api_platform.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/vendor/symfony/security-csrf/TokenStorage/TokenStorageInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="305">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/css/tailwind.css">
+    <entry file="file://$PROJECT_DIR$/api/vendor/lexik/jwt-authentication-bundle/Security/Guard/JWTTokenAuthenticator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="37" />
+        <state relative-caret-position="205">
+          <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/tailwind.config.js">
+    <entry file="file://$PROJECT_DIR$/api/src/Events/RecipeOwnerSubscriber.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/new.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        <state relative-caret-position="552">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding>
+            <element signature="e#30#81#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
