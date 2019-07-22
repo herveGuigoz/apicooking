@@ -20,10 +20,6 @@ security:
         dev:
             pattern: ^/_(profiler|wdt)
             security: false
-        register:
-            pattern:  ^/register
-            stateless: true
-            anonymous: true
         main:
             anonymous: true
             stateless: true
