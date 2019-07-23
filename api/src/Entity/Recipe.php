@@ -9,14 +9,26 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity()
  * @ApiResource(
- *      normalizationContext={"groups"={"recipe:read"}}
+ *     normalizationContext={"groups"={"recipe:read"}},
+ *     collectionOperations={
+ *         "get",
+ *         "post"={"access_control"="is_granted('ROLE_USER')"}
+ *     },
+ *     itemOperations={
+ *         "get",
+ *         "put"={"access_control"="is_granted('ROLE_USER') and previous_object.owner == user",
+ *          "access_control_message"="Sorry, but you are not the book owner."},
+ *         "delete"={"access_control"="is_granted('ROLE_USER') and previous_object.owner == user",
+ *          "access_control_message"="Sorry, but you are not the book owner."}
+ *     }
  * )
  * @ApiFilter(SearchFilter::class, properties={
- *     "owner.username": "partial"
+ *     "owner.id": "exact",
  * })
  */
 class Recipe
@@ -32,18 +44,21 @@ class Recipe
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"recipe:read", "user:read"})
+     * @Assert\NotBlank
      */
     private $title;
 
     /**
      * @ORM\Column(type="integer")
      * @Groups({"recipe:read"})
+     * @Assert\NotBlank
      */
     private $prepTime;
 
     /**
      * @ORM\Column(type="integer")
      * @Groups({"recipe:read"})
+     * @Assert\NotBlank
      */
     private $cookTime;
 
@@ -55,6 +70,7 @@ class Recipe
     /**
      * @ORM\Column(type="json_document", options={"jsonb": true}, nullable=false)
      * @Groups({"recipe:read"})
+     * @Assert\NotBlank
      */
     private $ingredients;
 
@@ -69,7 +85,7 @@ class Recipe
      * @ORM\JoinColumn(nullable=false)
      * @Groups({"recipe:read"})
      */
-    private $owner;
+    public $owner;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Users", mappedBy="likes")

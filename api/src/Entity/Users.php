@@ -8,12 +8,15 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Serializer\Annotation\Groups;
 use ApiPlatform\Core\Annotation\ApiResource;
-use ApiPlatform\Core\Annotation\ApiSubresource;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UsersRepository")
  * @ApiResource(
- *      normalizationContext={"groups"={"user:read"}}
+ *     normalizationContext={"groups"={"user:read"}},
+ *     denormalizationContext={"groups"={"user:write"}},
+ *     collectionOperations={"post", "get"},
+ *     itemOperations={"put", "delete", "get"}
  * )
  */
 class Users implements UserInterface
@@ -27,7 +30,8 @@ class Users implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Groups({"user:read"})
+     * @Groups({"user:read", "user:write"})
+     * @Assert\NotBlank
      */
     private $email;
 
@@ -39,6 +43,8 @@ class Users implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Groups({"user:write"})
+     * @Assert\NotBlank
      */
     private $password;
 
@@ -50,10 +56,16 @@ class Users implements UserInterface
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Recipe", inversedBy="likers")
-     * @Groups({"user:read", "user:write"})
-     * @ApiSubresource()
+     * @Groups({"user:read"})
      */
     private $likes;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups({"user:write", "user:read"})
+     * @Assert\NotBlank
+     */
+    private $name;
 
     public function __construct()
     {
@@ -192,6 +204,27 @@ class Users implements UserInterface
         if ($this->likes->contains($like)) {
             $this->likes->removeElement($like);
         }
+
+        return $this;
+    }
+
+    public function isFavorite(Recipe $recipe)
+    {
+        if($this->likes->contains($recipe)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }

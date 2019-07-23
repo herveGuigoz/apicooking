@@ -27,22 +27,4 @@ class UsersRepository extends ServiceEntityRepository
         $this->encoder = $encoder;
     }
 
-    /**
-     * Create a new user
-     * @param $data
-     * @return Users
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
-    */
-    public function createNewUser($data)
-    {
-        $user = new Users();
-        $user->setEmail($data['email'])
-            ->setPassword($this->encoder->encodePassword($user, $data['password']));
-
-        $this->manager->persist($user);
-        $this->manager->flush();
-
-        return $user;
-    }
 }

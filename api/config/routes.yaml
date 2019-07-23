@@ -1,3 +1,7 @@
 api_login_check:
     path: /login
     methods: ['POST']
+handle_users_likes:
+    path: /like
+    controller: App\Controller\HandleUsersLikes::favourites
+    methods: ['POST']

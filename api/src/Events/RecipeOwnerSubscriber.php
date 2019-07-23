@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class RecipeOwnerSubscriber implements EventSubscriberInterface
 {
@@ -37,29 +36,12 @@ class RecipeOwnerSubscriber implements EventSubscriberInterface
             return;
         }
 
-        $user = $this->getUser();
+        $user = $this->tokenStorage->getToken()->getUser();
 
-        if (!$user) {
-            throw new AccessDeniedException();
+        if (!$user instanceof Users) {
+            return;
         }
 
         $recipe->setOwner($user);
-
     }
-
-    private function getUser(): ?Users
-    {
-        if (!$token = $this->tokenStorage->getToken()) {
-            return null;
-        }
-
-        $user = $token->getUser();
-
-        if (!$user instanceof Users) {
-            return null;
-        }
-
-        return $user;
-    }
-
 }
