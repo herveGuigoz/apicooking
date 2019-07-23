@@ -2,31 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61948f9c-c827-4211-b9a7-6d57c26033e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/Controller/HandleUsersLikes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/Events/AuthenticationSuccessListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/Repository/RecipeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/familyCookingNuxtJs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/familyCookingNuxtJs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/api/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Events/PasswordEncoderSuscriber.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/Procfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/api/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/packages/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/packages/nelmio_cors.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/packages/nelmio_cors.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Entity/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Entity/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Events/RecipeOwnerSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Events/RecipeOwnerSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Migrations/Version20190721214801.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Repository/UsersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Repository/UsersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/api/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Welcome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/config/entrypoint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/welcome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2-proxy/conf.d/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/h2-proxy/conf.d/default.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +37,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="315">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1334">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h2-proxy/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="68" lean-forward="true" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h2-proxy/conf.d/default.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -58,10 +80,12 @@
       <find>RetrieveUser</find>
       <find>FormTypeGuesserInterface</find>
       <find>recipe</find>
+      <find>admin</find>
+      <find>client</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -92,6 +116,8 @@
         <option value="$PROJECT_DIR$/api/app.json" />
         <option value="$PROJECT_DIR$/api/config/packages/api_platform.yaml" />
         <option value="$PROJECT_DIR$/api/.env" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/h2-proxy/conf.d/default.conf" />
       </list>
     </option>
   </component>
@@ -200,7 +226,7 @@
       <path value="$PROJECT_DIR$/api/vendor/symfony/apache-pack" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1281" />
     <option name="height" value="730" />
@@ -222,27 +248,12 @@
             <path>
               <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="api_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="h2-proxy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="api_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api_platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+              <item name="h2-proxy" type="462c0819:PsiDirectoryNode" />
               <item name="conf.d" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -288,16 +299,17 @@
       <workItem from="1563812129954" duration="15233000" />
       <workItem from="1563866197166" duration="2358000" />
       <workItem from="1563887972749" duration="727000" />
+      <workItem from="1563892406632" duration="1694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30490000" />
+    <option name="totallyTimeSpent" value="32184000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1281" height="730" extended-state="6" />
+    <frame x="0" y="23" width="1281" height="730" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22033899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2235674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -457,13 +469,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/app.json" />
-    <entry file="file://$PROJECT_DIR$/api/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app.json" />
     <entry file="file://$PROJECT_DIR$/api/src/Entity/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
@@ -498,20 +504,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/docker/nginx/conf.d/default.conf">
+    <entry file="file://$PROJECT_DIR$/api/Procfile" />
+    <entry file="file://$PROJECT_DIR$/client/src/config/entrypoint.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/api/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="315">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/docker/varnish/conf/default.vcl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/docker/php/conf.d/api-platform.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/docker/nginx/conf.d/default.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1334">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h2-proxy/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="68" lean-forward="true" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h2-proxy/conf.d/default.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
         </state>
       </provider>
     </entry>

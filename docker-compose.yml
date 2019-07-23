@@ -79,8 +79,6 @@ services:
     ports:
       - "1337:80"
 
-
-
   h2-proxy:
     # Don't use this proxy in prod
     build:
